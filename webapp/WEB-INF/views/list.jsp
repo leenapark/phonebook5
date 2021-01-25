@@ -26,7 +26,7 @@
 				</tr>
 				<tr>
 				
-					<td><a href="${pageContext.request.contextPath}/phone/modifyForm?personId=${personVo.personId }">수정 </a></td>
+					<td><a href="${pageContext.request.contextPath}/phone/modifyForm2?personId=${personVo.personId }">수정 </a></td>
 					<td><a href="${pageContext.request.contextPath}/phone/delete/${personVo.personId }">삭제</a></td>
 										
 				</tr>
