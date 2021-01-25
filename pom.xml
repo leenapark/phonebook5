@@ -50,7 +50,7 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 		
-				<!-- MyBatis -->
+		<!-- MyBatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
