@@ -28,7 +28,7 @@
 
 	<!--쿼리문 작성 -->
 	<!-- 전체 리스트 가져오기 -->
-	<select id="selectList" resultType="com.javaex.vo.PersonVo">
+	<select id="selectList" resultType="PersonVo">
 		<![CDATA[
 			select  person_id as personId,
         			name,
@@ -71,8 +71,20 @@
  		]]>
 	</update>
 	
+	<!-- 전화번호 수정 -->
+	<update id="update2" parameterType="map">
+		<![CDATA[
+			update person
+			set name = #{name},
+				hp = #{hp},
+	    		company = #{company}
+			where person_id = #{personId}
+ 		]]>
+	</update>
+	
+	
 	<!-- 한명 데이터 가져오기 -->
-	<select id="selectOne" parameterType="int" resultType="com.javaex.vo.PersonVo">
+	<select id="selectOne" parameterType="int" resultType="PersonVo">
 		<![CDATA[
 			select  person_id personId,
         			name,
@@ -83,6 +95,17 @@
 		]]>
 	</select>
 	
+	<!-- 한명 데이터 가져오기 -->
+	<select id="selectOne2" parameterType="int" resultType="map">
+		<![CDATA[
+			select  person_id personId,
+        			name,
+        			hp,
+        			company
+			from person
+			where person_id = #{personId}
+		]]>
+	</select>
 	
 
 </mapper>
